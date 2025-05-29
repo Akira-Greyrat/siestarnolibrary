@@ -1,0 +1,343 @@
+{
+  "groups": [
+    {
+      "name": "halo",
+      "type": "run.halo.app.infra.properties.HaloProperties",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties"
+    },
+    {
+      "name": "halo.attachment",
+      "type": "run.halo.app.infra.properties.AttachmentProperties",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties"
+    },
+    {
+      "name": "halo.console",
+      "type": "run.halo.app.infra.properties.ConsoleProperties",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties"
+    },
+    {
+      "name": "halo.console.proxy",
+      "type": "run.halo.app.infra.properties.ProxyProperties",
+      "sourceType": "run.halo.app.infra.properties.ConsoleProperties"
+    },
+    {
+      "name": "halo.extension",
+      "type": "run.halo.app.infra.properties.ExtensionProperties",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties"
+    },
+    {
+      "name": "halo.extension.controller",
+      "type": "run.halo.app.infra.properties.ExtensionProperties$Controller",
+      "sourceType": "run.halo.app.infra.properties.ExtensionProperties"
+    },
+    {
+      "name": "halo.plugin",
+      "type": "run.halo.app.plugin.PluginProperties",
+      "sourceType": "run.halo.app.plugin.PluginProperties"
+    },
+    {
+      "name": "halo.security",
+      "type": "run.halo.app.infra.properties.SecurityProperties",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties"
+    },
+    {
+      "name": "halo.security.basic-auth",
+      "type": "run.halo.app.infra.properties.SecurityProperties$BasicAuthOptions",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties"
+    },
+    {
+      "name": "halo.security.cors-options",
+      "type": "run.halo.app.infra.properties.SecurityProperties$CorsOptions",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties"
+    },
+    {
+      "name": "halo.security.frame-options",
+      "type": "run.halo.app.infra.properties.SecurityProperties$FrameOptions",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties"
+    },
+    {
+      "name": "halo.security.referrer-options",
+      "type": "run.halo.app.infra.properties.SecurityProperties$ReferrerOptions",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties"
+    },
+    {
+      "name": "halo.security.remember-me",
+      "type": "run.halo.app.infra.properties.SecurityProperties$RememberMeOptions",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties"
+    },
+    {
+      "name": "halo.security.two-factor-auth",
+      "type": "run.halo.app.infra.properties.SecurityProperties$TwoFactorAuthOptions",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties"
+    },
+    {
+      "name": "halo.theme",
+      "type": "run.halo.app.infra.properties.ThemeProperties",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties"
+    },
+    {
+      "name": "halo.theme.initializer",
+      "type": "run.halo.app.infra.properties.ThemeProperties$Initializer",
+      "sourceType": "run.halo.app.infra.properties.ThemeProperties"
+    },
+    {
+      "name": "halo.uc",
+      "type": "run.halo.app.infra.properties.UcProperties",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties"
+    },
+    {
+      "name": "management.endpoint.globalinfo",
+      "type": "run.halo.app.infra.actuator.GlobalInfoEndpoint",
+      "sourceType": "run.halo.app.infra.actuator.GlobalInfoEndpoint"
+    },
+    {
+      "name": "management.endpoint.restart",
+      "type": "run.halo.app.infra.actuator.RestartEndpoint",
+      "sourceType": "run.halo.app.infra.actuator.RestartEndpoint"
+    }
+  ],
+  "properties": [
+    {
+      "name": "halo.attachment.resource-mappings",
+      "type": "java.util.List<run.halo.app.infra.properties.AttachmentProperties$ResourceMapping>",
+      "sourceType": "run.halo.app.infra.properties.AttachmentProperties"
+    },
+    {
+      "name": "halo.console.location",
+      "type": "java.lang.String",
+      "sourceType": "run.halo.app.infra.properties.ConsoleProperties",
+      "defaultValue": "classpath:\/console\/"
+    },
+    {
+      "name": "halo.console.proxy.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Indicates if the proxy behaviour is enabled. Default is false",
+      "sourceType": "run.halo.app.infra.properties.ProxyProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "halo.console.proxy.endpoint",
+      "type": "java.net.URI",
+      "description": "Console endpoint in development environment to be proxied. e.g.: http:\/\/localhost:8090\/",
+      "sourceType": "run.halo.app.infra.properties.ProxyProperties"
+    },
+    {
+      "name": "halo.extension.controller.disabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "run.halo.app.infra.properties.ExtensionProperties$Controller",
+      "defaultValue": false
+    },
+    {
+      "name": "halo.external-url",
+      "type": "java.net.URL",
+      "description": "External URL must be a URL and it can be null.",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties"
+    },
+    {
+      "name": "halo.initial-extension-locations",
+      "type": "java.util.Set<java.lang.String>",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties"
+    },
+    {
+      "name": "halo.plugin.auto-start-plugin",
+      "type": "java.lang.Boolean",
+      "description": "Auto start plugin when main app is ready.",
+      "sourceType": "run.halo.app.plugin.PluginProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "halo.plugin.classes-directories",
+      "type": "java.util.List<java.lang.String>",
+      "description": "Extended Plugin Class Directory.",
+      "sourceType": "run.halo.app.plugin.PluginProperties"
+    },
+    {
+      "name": "halo.plugin.disabled-plugins",
+      "type": "java.lang.String[]",
+      "description": "Plugins disabled by default.",
+      "sourceType": "run.halo.app.plugin.PluginProperties",
+      "defaultValue": []
+    },
+    {
+      "name": "halo.plugin.enabled-plugins",
+      "type": "java.lang.String[]",
+      "description": "Plugins enabled by default, prior to `disabledPlugins`.",
+      "sourceType": "run.halo.app.plugin.PluginProperties",
+      "defaultValue": []
+    },
+    {
+      "name": "halo.plugin.exact-version-allowed",
+      "type": "java.lang.Boolean",
+      "description": "Set to true to allow requires expression to be exactly x.y.z. The default is false, meaning that using an exact version x.y.z will implicitly mean the same as >=x.y.z.",
+      "sourceType": "run.halo.app.plugin.PluginProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "halo.plugin.fixed-plugin-path",
+      "type": "java.util.List<java.nio.file.Path>",
+      "description": "The default plugin path is obtained through file scanning. In the development mode, you can specify the plugin path as the project directory.",
+      "sourceType": "run.halo.app.plugin.PluginProperties"
+    },
+    {
+      "name": "halo.plugin.lib-directories",
+      "type": "java.util.List<java.lang.String>",
+      "description": "Extended Plugin Jar Directory.",
+      "sourceType": "run.halo.app.plugin.PluginProperties"
+    },
+    {
+      "name": "halo.plugin.runtime-mode",
+      "type": "org.pf4j.RuntimeMode",
+      "description": "Runtime Mode：development\/deployment.",
+      "sourceType": "run.halo.app.plugin.PluginProperties",
+      "defaultValue": "deployment"
+    },
+    {
+      "name": "halo.required-extension-disabled",
+      "type": "java.lang.Boolean",
+      "description": "This property could stop initializing required Extensions defined in classpath. See {@link run.halo.app.infra.ExtensionResourceInitializer#REQUIRED_EXTENSION_LOCATIONS} for more.",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "halo.security.basic-auth.disabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether basic authentication is disabled.",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties$BasicAuthOptions",
+      "defaultValue": true
+    },
+    {
+      "name": "halo.security.cors-options.configs",
+      "type": "java.util.List<run.halo.app.infra.properties.SecurityProperties$CorsConfig>",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties$CorsOptions"
+    },
+    {
+      "name": "halo.security.cors-options.disabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties$CorsOptions",
+      "defaultValue": false
+    },
+    {
+      "name": "halo.security.frame-options.disabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties$FrameOptions",
+      "defaultValue": false
+    },
+    {
+      "name": "halo.security.frame-options.mode",
+      "type": "org.springframework.security.web.server.header.XFrameOptionsServerHttpHeadersWriter$Mode",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties$FrameOptions",
+      "defaultValue": "sameorigin"
+    },
+    {
+      "name": "halo.security.password-reset-methods",
+      "type": "java.util.List<run.halo.app.infra.properties.SecurityProperties$PasswordResetMethod>",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties"
+    },
+    {
+      "name": "halo.security.referrer-options.policy",
+      "type": "org.springframework.security.web.server.header.ReferrerPolicyServerHttpHeadersWriter$ReferrerPolicy",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties$ReferrerOptions"
+    },
+    {
+      "name": "halo.security.remember-me.token-validity",
+      "type": "java.time.Duration",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties$RememberMeOptions",
+      "defaultValue": "14d"
+    },
+    {
+      "name": "halo.security.two-factor-auth.disabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether two-factor authentication is disabled.",
+      "sourceType": "run.halo.app.infra.properties.SecurityProperties$TwoFactorAuthOptions",
+      "defaultValue": false
+    },
+    {
+      "name": "halo.theme.generator-meta-disabled",
+      "type": "java.lang.Boolean",
+      "description": "Indicates whether the generator meta needs to be disabled.",
+      "sourceType": "run.halo.app.infra.properties.ThemeProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "halo.theme.initializer.disabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "run.halo.app.infra.properties.ThemeProperties$Initializer",
+      "defaultValue": false
+    },
+    {
+      "name": "halo.theme.initializer.location",
+      "type": "java.lang.String",
+      "sourceType": "run.halo.app.infra.properties.ThemeProperties$Initializer",
+      "defaultValue": "classpath:themes\/theme-earth.zip"
+    },
+    {
+      "name": "halo.uc.location",
+      "type": "java.lang.String",
+      "sourceType": "run.halo.app.infra.properties.UcProperties",
+      "defaultValue": "classpath:\/uc\/"
+    },
+    {
+      "name": "halo.uc.proxy",
+      "type": "run.halo.app.infra.properties.ProxyProperties",
+      "sourceType": "run.halo.app.infra.properties.UcProperties"
+    },
+    {
+      "name": "halo.use-absolute-permalink",
+      "type": "java.lang.Boolean",
+      "description": "Indicates if we use absolute permalink to post, page, category, tag and so on.",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "halo.work-dir",
+      "type": "java.nio.file.Path",
+      "sourceType": "run.halo.app.infra.properties.HaloProperties"
+    },
+    {
+      "name": "management.endpoint.globalinfo.access",
+      "type": "org.springframework.boot.actuate.endpoint.Access",
+      "description": "Permitted level of access for the globalinfo endpoint.",
+      "sourceType": "run.halo.app.infra.actuator.GlobalInfoEndpoint",
+      "defaultValue": "unrestricted"
+    },
+    {
+      "name": "management.endpoint.globalinfo.cache.time-to-live",
+      "type": "java.time.Duration",
+      "description": "Maximum time that a response can be cached.",
+      "sourceType": "run.halo.app.infra.actuator.GlobalInfoEndpoint",
+      "defaultValue": "0ms"
+    },
+    {
+      "name": "management.endpoint.restart.access",
+      "type": "org.springframework.boot.actuate.endpoint.Access",
+      "description": "Permitted level of access for the restart endpoint.",
+      "sourceType": "run.halo.app.infra.actuator.RestartEndpoint",
+      "defaultValue": "unrestricted"
+    },
+    {
+      "name": "management.endpoint.globalinfo.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable the globalinfo endpoint.",
+      "sourceType": "run.halo.app.infra.actuator.GlobalInfoEndpoint",
+      "defaultValue": true,
+      "deprecated": true,
+      "deprecation": {
+        "replacement": "management.endpoint.globalinfo.access",
+        "since": "3.4.0"
+      }
+    },
+    {
+      "name": "management.endpoint.restart.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable the restart endpoint.",
+      "sourceType": "run.halo.app.infra.actuator.RestartEndpoint",
+      "defaultValue": true,
+      "deprecated": true,
+      "deprecation": {
+        "replacement": "management.endpoint.restart.access",
+        "since": "3.4.0"
+      }
+    }
+  ],
+  "hints": []
+}
